@@ -6,6 +6,7 @@ import { monsterPics } from './Components/monsterpics.js';
 import './App.css';
 import AllDragons from './Components/AllDragons.jsx';
 import MonsterDetail from './Components/MonsterDetail.jsx';
+import background from "./Components/img/monster-hunter-world.jpeg"
 
 function App() {
   const [monsters, setMonsters] = useState([])
@@ -36,7 +37,10 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div style={{
+        backgroundImage:
+      `url(${background})`}} className="App">
+     
       <Navbar />
       <Routes>
         <Route path="/" element={<AllDragons monsters={monsters}/>}/>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import './MonsterDetail.css';
 
 export default function MonsterDetail() {
 
@@ -20,10 +21,10 @@ export default function MonsterDetail() {
 
 
   return (
-    <div>
+    <div className="size">
       <h1>{monster.name}</h1>
       {monster.image && <img src={monster.image} alt={monster.name} />}
-      <p>{monster.description}</p>
+      <p className='detail'>{monster.description}</p>
     </div>
   )
 }
